@@ -1,6 +1,9 @@
 class QuestionsController < ApplicationController
 before_filter :ensure_logged_in
-
+	
+	def index
+		@questions = Question.all
+	end 
 	def new
 		@question = Question.new
 	end
@@ -13,7 +16,7 @@ before_filter :ensure_logged_in
 		@question = Question.find(params[:id])
 
 		if @question.update_attributes(question_params)
-			# this will redirect to the unpublised question show page
+			redirect_to question_path(@question)
 		else 
 			render "edit"
 		end 
@@ -23,7 +26,7 @@ before_filter :ensure_logged_in
 		@question = Question.new(question_params)
 
 		if @question.save
-			#this show redirect to the question show page
+			redirect_to questions_path
 		else
 			render 'new'
 		end	
