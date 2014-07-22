@@ -40,7 +40,6 @@ class QuestionsController < ApplicationController
 
 	private
 		def question_params
-			
-			
+			params.require(:question).permit(:question, answer_choices_attributes: [:answer_choice])
 		end
 end
