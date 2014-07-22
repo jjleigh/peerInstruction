@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+before_filter :ensure_logged_in
+
 	def new
 		@question = Question.new
 	end
