@@ -1,15 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'responses/new'
-
-  get 'responses/create'
-
-  get 'responses/edit'
-
-  get 'responses/show'
-
-  get 'responses/destroy'
-
   resources :password_resets
 
   resources :user_sessions
