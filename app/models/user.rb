@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
 
   validates :email, uniqueness: true
   
+  has_one :response
 end
