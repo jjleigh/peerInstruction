@@ -3,4 +3,9 @@
    <%= question.question %>
  </h3>
 <% end %>
+ <ol type="a">
+ 	<% question.answer_choices.each do |a| %>
+		<li><%= a.answer_choice %></li>
+ 		<% end %>
+ </ol>
 <!-- keeps the description to 100 characters or less -->
