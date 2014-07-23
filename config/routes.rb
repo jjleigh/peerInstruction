@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :user_sessions
 
-  resources :users, :only => [:new, :create]
+  resources :users, :except => [:index]
 
   resources :questions do
     resources :answer_choices
