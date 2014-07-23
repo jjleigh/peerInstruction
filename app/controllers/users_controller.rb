@@ -8,9 +8,10 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
 
   	if @user.save 
-  		redirect_to root_url, :notice => "You have successfully signed up!"
+  		redirect_to questions_url, :notice => "You have successfully signed up!"
   	else 
   		render 'new'
+      flash.now[:alert] = "Sign up not successful"
   	end
   end
 

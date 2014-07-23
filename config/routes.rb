@@ -8,8 +8,9 @@ Rails.application.routes.draw do
 
   resources :questions do
     resources :answer_choices
-   root to: "welcome#index"
   end 
+
+  root to: "welcome#index"
 
    get 'login' => 'user_sessions#new', :as => :login
    post 'logout' => 'user_sessions#destroy', :as => :logout

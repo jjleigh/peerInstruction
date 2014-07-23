@@ -30,6 +30,7 @@ gem 'foundation-rails'
 
 group :development do
   gem 'rails_layout'
+  gem 'pry'
 end
 
 gem 'sorcery'

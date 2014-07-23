@@ -1,6 +1,5 @@
 <%# add navigation links to this file %>
 <% if current_user %>
-     <li> <%= link_to "Edit Profile", edit_user_path(current_user.id) %></li>
       <li><%= link_to "Logout", :logout, method: :post %></li>
     <% else %>
       <li><%= link_to "Register", new_user_path %></li> |
