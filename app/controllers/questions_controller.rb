@@ -54,6 +54,6 @@ before_filter :ensure_logged_in
 
 	private
 		def question_params
-			params.require(:question).permit(:question, answer_choices_attributes: [:answer_choice, :_destroy])
+			params.require(:question).permit(:question, :is_open, answer_choices_attributes: [:answer_choice, :_destroy])
 		end
 end

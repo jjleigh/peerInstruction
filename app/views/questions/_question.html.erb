@@ -8,4 +8,8 @@
 		<li><%= a.answer_choice %></li>
  		<% end %>
  </ol>
-<!-- keeps the description to 100 characters or less -->
+<%= form_for question do |f| %>
+<%= f.label :is_open %>
+<%= f.check_box :is_open %>
+<%= f.submit %>
+<% end %>
