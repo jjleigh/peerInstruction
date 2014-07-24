@@ -20,7 +20,7 @@
   <div class="field">
       <div id="rewards">
           <%= f.fields_for :answer_choices do |a| %>
-              <%= render 'answer_fields', :f => a %>
+              <%= render 'answer_choice_fields', :f => a %>
           <% end %>
           <div class="small-12 columns">
               <div class="links">
@@ -30,7 +30,6 @@
       </div>
   </div>
             
-    <!-- this needs to be centered -->
     <div class="actions">
         <div class="small-12 columns">
             <%= f.submit :is_open => true, :class => 'button [radius round]' %>
