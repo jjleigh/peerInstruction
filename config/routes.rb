@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'answer_choices_users/new'
+
+  get 'answer_choices_users/create'
+
   resources :password_resets
 
   resources :user_sessions
