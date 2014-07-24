@@ -43,15 +43,6 @@ before_filter :ensure_logged_in
 		@question.destroy
 	end
 
-	def question_status
-		@question = Question.find(params[:id])
-
-		if @question.is_open == true
-			#the question should be accessible to students for answering
-		else 
-		end
-	end
-
 	private
 		def question_params
 			params.require(:question).permit(:question, :is_open, answer_choices_attributes: [:answer_choice, :_destroy])

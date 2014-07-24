@@ -17,6 +17,7 @@
     <main role="main">
        <%= render 'layouts/messages' %>
        <%= yield %>
+      <p>Logged in As: <%= current_user.email %><p>
     </main>
   </body>
 </html>

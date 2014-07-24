@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140723191214) do
+ActiveRecord::Schema.define(version: 20140724215747) do
 
   create_table "answer_choices", force: true do |t|
     t.text     "answer_choice"
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20140723191214) do
     t.string   "name"
     t.string   "remember_me_token"
     t.datetime "remember_me_token_expires_at"
+    t.boolean  "instructor"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
