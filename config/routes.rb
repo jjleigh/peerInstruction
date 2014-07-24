@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'responses/new'
+
+  get 'responses/create'
+
+  get 'responses/show'
+
   resources :password_resets
 
   resources :user_sessions
