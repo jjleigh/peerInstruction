@@ -5,6 +5,7 @@
  <ol type="a">
  	<% @question.answer_choices.each do |a| %>
 		<li><%= button_to a.answer_choice, question_answer_choice_responses_path(@question, a) %></li>
+		<li><%= a.users.size %></li>
  		<% end %>
  </ol>
 <% else %>
