@@ -1,12 +1,15 @@
-
+<% if @question.is_open == true %>
  <h3>
    <%= @question.question %>
  </h3>
  <ol type="a">
  	<% @question.answer_choices.each do |a| %>
-		<li><%= a.answer_choice %></li>
+		<li><%= button_to a.answer_choice, action: question_answer_choice_reponses_path %></li>
  		<% end %>
  </ol>
-
- <%= link_to "Push this question to respondents", questions_path %><br><br>
+<% else %>
+	<% @question.answer_choices.each do |a| %>
+		<li><%= a.answer_choice %></li>
+ 		<% end %>
+<% end %>
  <%= link_to "Back to my questions", questions_path %>
