@@ -1,4 +1,5 @@
 <% if @question.is_open == true %>
+<h6>Question is open for voting</h6>
  <h3>
    <%= @question.question %>
  </h3>
@@ -9,8 +10,14 @@
  		<% end %>
  </ol>
 <% else %>
+<h6>Question is closed for voting</h6>
+ <h3>
+   <%= @question.question %>
+ </h3>
+ <ol type="a">
 	<% @question.answer_choices.each do |a| %>
 		<li><%= a.answer_choice %></li>
  		<% end %>
+ 	</ol>
 <% end %>
  <%= link_to "Back to my questions", questions_path %>

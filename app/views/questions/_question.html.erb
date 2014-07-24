@@ -1,7 +1,10 @@
 <%= link_to question_path(question.id) do %>
  <h3>
-   <%= question.question %>
+   <%= question.question %><br>
  </h3>
+ <h5>
+    It is <%= question.is_open %> that this question is open
+ </h5>
 <% end %>
  <ol type="a">
  	<% question.answer_choices.each do |a| %>
@@ -9,7 +12,7 @@
  		<% end %>
  </ol>
 <%= form_for question do |f| %>
-<%= f.label :is_open %>
-<%= f.check_box :is_open %>
-<%= f.submit %>
+	<%= f.label :is_open %>
+	<%= f.check_box :is_open %>
+	<%= f.submit %>
 <% end %>
