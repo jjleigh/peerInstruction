@@ -12,6 +12,8 @@ before_filter :ensure_logged_in, except: [:index, :show]
 		@question = Question.find(params[:id])
 	end
 
+#Could add a change state method and special route here; 
+
 	def update
 		@question = Question.find(params[:id])
 

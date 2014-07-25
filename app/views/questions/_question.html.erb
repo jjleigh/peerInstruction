@@ -1,5 +1,6 @@
 <%= link_to question_path(question.id) do %>
  <h3>
+ <hr>
    <%= question.question %><br>
  </h3>
  <h5>
@@ -11,8 +12,7 @@
 		<li><%= a.answer_choice %></li>
  		<% end %>
  </ol>
+ 
 <%= form_for question do |f| %>
-	<%= f.label :is_open %>
-	<%= f.check_box :is_open %>
-	<%= f.submit %>
+	<%= f.label :Question_is_open %> <%= f.check_box :is_open, class: "question_checkboxes" %> </div>	<%= f.submit %>
 <% end %>

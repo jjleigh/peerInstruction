@@ -6,7 +6,7 @@
  </h3>
  <ol type="a">
  	<% @question.answer_choices.each do |a| %>
-		<li><%= button_to a.answer_choice, question_answer_choice_responses_path(@question, a) %><%= a.users.size %></li>
+		<li><%= button_to a.answer_choice, question_answer_choice_responses_path(@question, a) %></li>
  	<% end %>
  </ol>
 <% else %>
@@ -16,7 +16,7 @@
 	</h3>
  	<ol type="a">
 		<% @question.answer_choices.each do |a| %>
-			<li><%= a.answer_choice %></li>
+			<li><%= a.answer_choice %> voted by <%= a.users.size %> respondents</li>
  		<% end %>
  	</ol>
  	<%= pie_chart AnswerChoice.group(:created_at).count %>
