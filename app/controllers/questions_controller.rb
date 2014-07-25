@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-before_filter :ensure_logged_in
+before_filter :ensure_logged_in, except: [:index, :show]
 	
 	def index
 		@questions = Question.all

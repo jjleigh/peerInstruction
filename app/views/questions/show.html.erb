@@ -1,3 +1,4 @@
+<%= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
 <% if @question.is_open == true %>
 <h6>Question is open for voting</h6>
  <h3>
@@ -19,5 +20,7 @@
 		<li><%= a.answer_choice %></li>
  		<% end %>
  	</ol>
+ 	<%= pie_chart AnswerChoice.group(:created_at).count %>
+ 	 	<%= bar_chart AnswerChoice.group(:created_at).count %>
 <% end %>
  <%= link_to "Back to my questions", questions_path %>
