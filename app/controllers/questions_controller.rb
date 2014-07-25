@@ -41,6 +41,7 @@ before_filter :ensure_logged_in
 		@question = Question.find(params[:id])
 
 		@question.destroy
+		redirect_to questions_path
 	end
 
 	private

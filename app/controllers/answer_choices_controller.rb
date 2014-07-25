@@ -6,7 +6,7 @@ class AnswerChoicesController < ApplicationController
 	def create
 		@answer_choice = @question.answer_choices.build(answer_choices_params)
 		@answer_choice.user_id = current_user.id
-
+    # @answer_choice.users << current_user
 		if @answer_choice.save
 			redirect_to @answer_choice
 		else
