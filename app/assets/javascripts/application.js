@@ -15,6 +15,8 @@
 //= require foundation
 //= require_tree .
 //= require cocoon.js
+//= require highcharts
+
 $(function() {
   $(document).foundation();
 });
