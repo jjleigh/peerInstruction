@@ -1,4 +1,7 @@
 <%= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
+
+<!-- this is the show page for an individual question. -->
+<!-- Instructor -->
 <% if @question.is_open == true %>
 <h6>Question is open for voting</h6>
  <h3>
@@ -22,4 +25,6 @@
  	<%= pie_chart AnswerChoice.group(:created_at).count %>
  	 	<%= bar_chart AnswerChoice.group(:created_at).count %>
 <% end %>
+<%= link_to "Delete Question", question_path(@question), method: :delete %><br>
  <%= link_to "Back to my questions", questions_path %>
+

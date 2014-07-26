@@ -15,10 +15,15 @@
       <%= render 'layouts/navigation' %>
     </header>
     <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-      <p>Logged in As: <%= 
-      current_user.name %><p>
+        <%= render 'layouts/messages' %>
+        <%= yield %>
+        <% if current_user %>
+          <p>Logged in As: <%= current_user.name %><p>
+        <% else %>
+          <p>You are not logged in!</p>
+        <% end %>
+
+
     </main>
   </body>
 </html>

@@ -1,3 +1,5 @@
+<!-- this is the form for the new question -->
+
 <%= form_for @question do |f| %>
 	<% if @question.errors.any? %>
 		<div id='error_explanation'>
@@ -18,7 +20,7 @@
   </div>
 
   <div class="field">
-      <div id="rewards">
+      <div>
           <%= f.fields_for :answer_choices do |a| %>
               <%= render 'answer_choice_fields', :f => a %>
           <% end %>
@@ -28,11 +30,10 @@
               </div>
           </div>
       </div>
+  </div>   
+  <div class="actions">
+      <div class="small-12 columns">
+          <%= f.submit :is_open => true, :class => 'button [radius round]' %>
+      </div>
   </div>
-            
-    <div class="actions">
-        <div class="small-12 columns">
-            <%= f.submit :is_open => true, :class => 'button [radius round]' %>
-        </div>
-    </div>
 <% end %>

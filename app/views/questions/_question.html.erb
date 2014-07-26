@@ -1,3 +1,5 @@
+<!-- this page is the view all questions page -->
+
 <%= link_to question_path(question.id) do %>
  <h3>
    <%= question.question %><br>
@@ -16,3 +18,4 @@
 	<%= f.check_box :is_open %>
 	<%= f.submit %>
 <% end %>
+ 

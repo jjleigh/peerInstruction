@@ -41,6 +41,7 @@ before_filter :ensure_logged_in, except: [:index, :show]
 		@question = Question.find(params[:id])
 
 		@question.destroy
+		redirect_to questions_path
 	end
 
 	private
