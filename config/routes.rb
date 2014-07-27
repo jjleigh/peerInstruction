@@ -4,12 +4,14 @@ Rails.application.routes.draw do
 
   resources :user_sessions
   
+
   resources :users, :except => [:index]
   resources :questions do
     resources :answer_choices do
         resources :responses, :only => [:create]
     end 
   end
+
  
 
   root to: "welcome#index"
