@@ -1,19 +1,52 @@
 <!-- this page shows all the questions the user has created -->
-<div class="row">
-	<div class="small-6 columns">
-		<h1>My questions</h1>
-		<hr>
-	</div>
-</div>
 
-
-<div id="questions">
-<%= render @questions %>
-
-</div>
-
-<div class="row">
-	<div class="small-6 columns">
-		<%= link_to "Create another new question", new_question_path, :class => "button [tiny small large]" %>
-	</div>
-</div>
+  <div class="row">
+    <div class="large-12 columns">
+      <h1>My Questions</h1>
+      <hr/>
+    </div>
+  </div>
+ 
+   
+ 
+ 
+   <!-- this row holds the questions -->
+ 
+  <div class="row">
+     
+    <div class="large-9 columns" role="content">
+ 
+			<div id="questions">
+				<%= render @questions %>
+			</div>
+ 
+    </div>
+ 
+    
+ 
+    <aside class="small-3 columns">
+ 			<div class="panel">
+	      <h5>Welcome</h5>
+	      <ul class="side-nav">
+	        <li><a href="#">Name</a></li>
+	        <li><a href="#">email</a></li>
+	        <li><a href="#">Your groups</a></li>
+	      </ul>
+	 
+	      <div class="panel">
+	        <h5>My Dash</h5>
+	        <ul class="side-nav">
+		        <li><%= link_to 'Settings' %></li>
+		        <li><%= link_to "New question", new_question_path %></li>
+		        <li><%= link_to 'Invite' %></li>
+		        <li><%= link_to 'Delete account' %></li>
+		      </ul>
+		    </div>
+     	</div>
+ 
+    </aside>
+ 
+     
+  </div>
+    
+	

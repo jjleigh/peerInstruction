@@ -1,24 +1,22 @@
 <!-- this page is the view all questions page -->
-<div class="row">
-	<div class="small-6 columns">
-		<%= link_to question_path(question.id) do %>
-		 <h3>
-		   <%= question.question %><br>
-		 </h3>
-		 <h5>
-		    It is <%= question.is_open %> that this question is open
-		 </h5>
-		<% end %>
-		 <ol type="a">
-		 	<% question.answer_choices.each do |a| %>
-				<li><%= a.answer_choice %></li>
-		 		<% end %>
-		 </ol>
-		<%= form_for question do |f| %>
-			<%= f.label :is_open %>
-			<%= f.check_box :is_open %>
-			<%= f.submit %>
-		<% end %>
-		<hr>
-	</div>
-</div>
+
+	<%= link_to question_path(question.id) do %>
+	 	<h3>
+	   <%= question.question %><br>
+	 	</h3>
+	 <h5>
+	    It is <%= question.is_open %> that this question is open
+	 </h5>
+	<% end %>
+ 	<ol type="a">
+ 		<% question.answer_choices.each do |a| %>
+			<li><%= a.answer_choice %></li>
+ 		<% end %>
+ 	</ol>
+	<%= form_for question do |f| %>
+		<%= f.label :is_open %>
+		<%= f.check_box :is_open %>
+		<%= f.submit %>
+	<% end %>
+	<hr>
+  
