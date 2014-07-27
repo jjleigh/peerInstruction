@@ -17,13 +17,31 @@
     <main role="main" class="main">
         <%= render 'layouts/messages' %>
         <%= yield %>
-        <% if current_user %>
-          <p>Logged in As: <%= current_user.name %><p>
-        <% else %>
-          <p>You are not logged in!</p>
-        <% end %>
-
+        
 
     </main>
   </body>
+  <hr/>
+  <footer class="row">
+    <div class="large-12 columns">
+     
+      <div class="row">
+        <div class="large-6 columns">
+          <% if current_user %>
+            <p>Logged in As: <%= current_user.name %><p>
+          <% else %>
+            <p>You are not logged in!</p>
+          <% end %>
+
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> 
+  </footer>
+    
 </html>

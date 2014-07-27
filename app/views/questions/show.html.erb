@@ -2,6 +2,8 @@
 
 <!-- this is the show page for an individual question. -->
 <!-- Instructor -->
+<div class="row">
+	<div class="small-6 columns"></div>
 <% if @question.is_open == true %>
 <h6>Question is open for voting</h6>
  <h3>
@@ -23,8 +25,8 @@
  		<% end %>
  	</ol>
  	<%= pie_chart AnswerChoice.group(:created_at).count %>
- 	 	<%= bar_chart AnswerChoice.group(:created_at).count %>
+ 	<%= bar_chart AnswerChoice.group(:created_at).count %>
 <% end %>
-<%= link_to "Delete Question", question_path(@question), method: :delete %><br>
- <%= link_to "Back to my questions", questions_path %>
-
+<%= link_to "Delete Question", question_path(@question), method: :delete, :class => "button [tiny small large]" %><br>
+ <%= link_to "Back to my questions", questions_path, :class => "button [tiny small large]" %>
+</div>
