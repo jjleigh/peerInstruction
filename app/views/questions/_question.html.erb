@@ -3,10 +3,10 @@
  <hr>
    <%= question.question %><br>
  </h3>
+<% end %>
  <h5>
     It is <%= question.is_open %> that this question is open
  </h5>
-<% end %>
  <ol type="a">
  	<% question.answer_choices.each do |a| %>
 		<li><%= a.answer_choice %></li>
@@ -15,16 +15,14 @@
  
  <% if current_user && current_user.instructor == true %>
 
- <div>
  	<%= form_for question do |f| %>
 
  	<div class="switch">
- 		<%= f.check_box :is_open %> 
- 		<%= f.label :is_open %> 
+ <%= f.check_box :is_open %> 
+	<%= f.label :is_open %>
  	</div>
 
  	<%= f.submit %>
  	 <% end %>
- </div>	
 
  <% end %>
