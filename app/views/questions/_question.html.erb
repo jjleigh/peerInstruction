@@ -4,10 +4,11 @@
 	 	<h3>
 	   <%= question.question %><br>
 	 	</h3>
-	 <h5>
+	 <!-- <h5>
 	    It is <%= question.is_open %> that this question is open
-	 </h5>
+	 </h5> -->
 	<% end %>
+	<p>created by:<%= question.user_id %></p>
  	<ol type="a">
  		<% question.answer_choices.each do |a| %>
 			<li><%= a.answer_choice %></li>
