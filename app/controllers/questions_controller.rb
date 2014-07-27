@@ -2,7 +2,8 @@ class QuestionsController < ApplicationController
 before_filter :ensure_logged_in, except: [:index, :show]
 	
 	def index
-		@questions = Question.all
+		@user = current_user
+		@questions = @user.questions.all if @user
 	end 
 	def new
 		@question = Question.new
