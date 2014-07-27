@@ -2,7 +2,7 @@
 
 	<%= link_to question_path(question.id) do %>
 	 	<h3>
-	   <%= question.question %><br>
+	   <%= question.description %><br>
 	 	</h3>
 	 <!-- <h5>
 	    It is <%= question.is_open %> that this question is open
@@ -11,7 +11,7 @@
 	<p>created by:<%= question.user_id %></p>
  	<ol type="a">
  		<% question.answer_choices.each do |a| %>
-			<li><%= a.answer_choice %></li>
+			<li><%= a.description %></li>
  		<% end %>
  	</ol>
 	<%= form_for question do |f| %>
