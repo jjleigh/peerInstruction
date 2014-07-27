@@ -1,4 +1,6 @@
-<%= form_tag user_sessions_path, :method => :post do %>
+<div class="row">
+  <div class="small-6 columns">
+    <%= form_tag user_sessions_path, :method => :post do %>
   <div class="field">
     <%= label_tag :email %><br />
     <%= text_field_tag :email %>
@@ -11,6 +13,8 @@
     <%= label_tag :remember %>
     <%= check_box_tag :remember %>
   <div class="actions">
-    <%= submit_tag "Login" %>
+    <%= submit_tag "Login", :class => 'button [tiny small large]' %>
   </div>
 <% end %>
+  </div>
+</div>

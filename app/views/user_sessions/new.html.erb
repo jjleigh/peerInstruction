@@ -1,8 +1,20 @@
-<h1>Login</h1>
+<div class="row">
+	<div class="row">
+		<div class="small-6 columns">
+			<h1>Login</h1>
+			<%= render 'form' %>
+		</div>
+	</div>
 
-<%= render 'form' %>
+	<div class="row">
+		<div class="small-6 columns">
+			<h4>Forgot Password?</h4>
+			<%= render 'forgot_password_form' %>
+		</div>
+	</div>
 
-<%= link_to 'Back', user_sessions_path %>
+</div>
 
-<h1>Forgot Password?</h1>
-<%= render 'forgot_password_form' %>
+
+
+
