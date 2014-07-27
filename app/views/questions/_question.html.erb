@@ -14,11 +14,17 @@
  </ol>
  
  <% if current_user && current_user.instructor == true %>
- <div>
- <%= form_for question do |f| %>
- <%= f.label :Question_is_open %> <%= f.check_box :is_open, class: "question_checkboxes" %> 
- <%= f.submit %>
- </div>	
- <% end %>
 
-<% end %>
+ <div>
+ 	<%= form_for question do |f| %>
+
+ 	<div class="switch">
+ 		<%= f.check_box :is_open %> 
+ 		<%= f.label :is_open %> 
+ 	</div>
+
+ 	<%= f.submit %>
+ 	 <% end %>
+ </div>	
+
+ <% end %>
