@@ -13,6 +13,9 @@
  		<% end %>
  </ol>
  
+<% if current_user && current_user.instructor == true %>
 <%= form_for question do |f| %>
 	<%= f.label :Question_is_open %> <%= f.check_box :is_open, class: "question_checkboxes" %> </div>	<%= f.submit %>
+<% end %>
+
 <% end %>
