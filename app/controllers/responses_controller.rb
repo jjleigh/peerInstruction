@@ -6,6 +6,7 @@ class ResponsesController < ApplicationController
     @response.answer_choice_id =  params[:answer_choice_id]
     @response.user = current_user
 
+  
     if @response.save
       redirect_to questions_url, :notice => "Successfully answered"
     else 
