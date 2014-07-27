@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
   validates :email, uniqueness: true
 
   has_many :responses
+  has_many :questions
 
 end
