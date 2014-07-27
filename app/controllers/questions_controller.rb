@@ -18,7 +18,7 @@ before_filter :require_login, except: [:index, :show]
 		@question = Question.find(params[:id])
 
 		if @question.update_attributes(question_params)
-			redirect_to question_path(@question)
+			redirect_to questions_path
 		else 
 			render "edit"
 		end 
