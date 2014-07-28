@@ -5,8 +5,14 @@ Rails.application.routes.draw do
   resources :user_sessions
   
 
-  resources :users, :except => [:index]
+  resources :users, :except => [:index] do
+    resources :questions, :only => [:index]
+  end
+
   resources :questions do
+    # collection do
+    #   get 'my_question'
+    # end
     resources :answer_choices do
         resources :responses, :only => [:create]
     end 
