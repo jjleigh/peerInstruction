@@ -25,7 +25,7 @@
 					<li><%= a.description %></li>
 		 		<% end %>
 		 	</ol>
-		 	<%= bar_chart Response.group(:user).count %>
+		 	<%= pie_chart Response.group(:user).count %>
 		<% end %>
 	<%= link_to "Delete Question", question_path(@question), method: :delete, :class => "button [tiny small large]" %><br>
  <%= link_to "Back to my questions", questions_path, :class => "button [tiny small large]" %>
