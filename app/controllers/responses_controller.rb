@@ -10,8 +10,10 @@ class ResponsesController < ApplicationController
     if @response.save
       redirect_to questions_url, :notice => "Successfully answered"
     else 
+      @question = Question.find(params[:question_id])
+      flash.now[:alert] = @response.errors.full_messages.first
       render "questions/show"
-      flash.now[:alert] = "Error responding to question"
+      
     end
   end
 end

@@ -5,24 +5,26 @@
 	 	<hr>
 	   <%= question.description %><br>
 	 	</h3>
+	<% end %>
 	 <h5>
 	    It is <%= question.is_open %> that this question is open
 	 </h5>
-	<% end %>
-	<ol type="a">
+
+	
+ 	<ol type="a">
  		<% question.answer_choices.each do |a| %>
 			<li><%= a.description %></li>
  		<% end %>
  	</ol>
 
 
- <% if current_user && current_user.instructor == true %>
+<% if question.user == current_user %>
  	<%= form_for question, remote: true do |f| %>
 
  	<div class="switch">
- <%= f.check_box :is_open, id: "question_#{question.id}_is_open" %> 
-	<%= f.label :is_open, for: "question_#{question.id}_is_open" %>
+	 	<%= f.check_box :is_open, id: "question_#{question.id}_is_open" %> 
+		<%= f.label :is_open, for: "question_#{question.id}_is_open" %>
  	</div>
- 	 <% end %>
+ 	<% end %>
+<% end %>
 
- <% end %>

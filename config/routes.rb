@@ -5,11 +5,19 @@ Rails.application.routes.draw do
   resources :user_sessions
   
 
+
   get 'login' => 'user_sessions#new', :as => :login
   post 'logout' => 'user_sessions#destroy', :as => :logout
 
-  resources :users, :except => [:index]
+
+  resources :users, :except => [:index] do
+    resources :questions, :only => [:index]
+  end
+
   resources :questions do
+    # collection do
+    #   get 'my_question'
+    # end
     resources :answer_choices do
         resources :responses, :only => [:create]
     end 
