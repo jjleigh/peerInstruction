@@ -1,10 +1,27 @@
 class QuestionsController < ApplicationController
-before_filter :require_login, except: [:index, :show]
+
+before_filter :ensure_logged_in, except: [:my_questions, :show]
+
 	
+	# handles /users/5/questions
+	# or /questions
+
 	def index
-		@user = current_user
-		@questions = @user.questions # This line of code only allows a current user to see their own questions
+		if params[:user_id]
+			@user = User.find(params[:user_id])
+			@questions = @user.questions
+		else
+			@questions = Question.where(:is_open => true)
+		end
+
 	end 
+
+	# # /questions/my_question
+	# def my_question
+	# 	@user = current_user 
+	# 	@my_questions = @user.questions # This line of code only allows a current user to see their own questions
+	# end 
+
 	def new
 		@question = Question.new
 	end
@@ -39,7 +56,9 @@ before_filter :require_login, except: [:index, :show]
 
 	def show
 		@question =Question.find(params[:id])
-		
+		if @question.is_open
+			@question
+		end
 	end
 
 	def destroy
@@ -51,6 +70,10 @@ before_filter :require_login, except: [:index, :show]
 
 	private
 		def question_params
+<<<<<<< HEAD
 			params.require(:question).permit(:description, :is_open, user_attributes: [:id], answer_choices_attributes: [:description, :_destroy])
+=======
+			params.require(:question).permit(:description, :is_open, answer_choices_attributes: [:description, :_destroy])
+>>>>>>> anonymousVoting
 		end
 end

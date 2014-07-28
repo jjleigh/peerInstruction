@@ -23,7 +23,6 @@ module PeerInstruction
     # For Foundation 5
     config.assets.precompile += %w( vendor/modernizr )
     
-    # this adds custom validation path
-    config.autoload_paths += %W["#{config.root}/app/validators/"]
+    
   end
 end

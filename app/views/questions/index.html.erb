@@ -1,11 +1,19 @@
 
-<!-- this page shows all the questions the user has created -->
 
+<!-- this page shows all the questions the user has created -->
   <div class="row">
     <div class="small-12 columns">
-      <h1>My Questions</h1>
+			<% if params[:user_id] %>
+      <h1><%= @user.name %>'s questions</h1>
+			<% else %>
+			<h1>All questions</h1>
+			<% end %>
+      <hr/>
     </div>
   </div>
+
+
+
  
    
  
@@ -15,7 +23,7 @@
   <div class="row">
      
     <div class="small-9 columns" role="content">
- 
+ 	
 			<div id="questions">
 				<%= render @questions %>
 			</div>
@@ -51,4 +59,5 @@
     </aside>
  
      
+
   </div>
