@@ -2,7 +2,8 @@ class QuestionsController < ApplicationController
 before_filter :ensure_logged_in, except: [:index, :show]
 	
 	def index
-		@questions = Question.all
+		@user = current_user
+		@questions = @user.questions # This line of code only allows a current user to see their own questions
 	end 
 	def new
 		@question = Question.new
@@ -24,6 +25,8 @@ before_filter :ensure_logged_in, except: [:index, :show]
 
 	def create
 		@question = Question.new(question_params)
+		@question.user_id = current_user.id # This line of code stores the user for the question as the current user
+
 
 		if @question.save
 			redirect_to questions_path
@@ -41,6 +44,7 @@ before_filter :ensure_logged_in, except: [:index, :show]
 		@question = Question.find(params[:id])
 
 		@question.destroy
+		redirect_to questions_path
 	end
 
 	private

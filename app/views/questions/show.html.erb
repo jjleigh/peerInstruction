@@ -1,25 +1,35 @@
 <%= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
-<% if @question.is_open == true %>
-<h6>Question is open for voting</h6>
- <h3>
-   <%= @question.question %>
- </h3>
- <ol type="a">
- 	<% @question.answer_choices.each do |a| %>
-		<li><%= button_to a.answer_choice, question_answer_choice_responses_path(@question, a) %><%= a.users.size %></li>
- 	<% end %>
- </ol>
-<% else %>
-	<h6>Question is closed for voting</h6>
-	<h3>
-  	<%= @question.question %>
-	</h3>
- 	<ol type="a">
-		<% @question.answer_choices.each do |a| %>
-			<li><%= a.answer_choice %></li>
- 		<% end %>
- 	</ol>
- 	<%= pie_chart AnswerChoice.group(:created_at).count %>
- 	 	<%= bar_chart AnswerChoice.group(:created_at).count %>
-<% end %>
- <%= link_to "Back to my questions", questions_path %>
+
+<!-- this is the show page for an individual question. -->
+<!-- Instructor -->
+
+<div class="row">
+	<div class="small-6 columns">
+		<% if @question.is_open == true %>
+			<h6>Question is open for voting</h6>
+			<h3>
+			  <%= @question.description %>
+			</h3>
+		 	<ol type="a">
+			 	<% @question.answer_choices.each do |a| %>
+					<li><%= button_to a.description, question_answer_choice_responses_path(@question, a) %><%= a.users.size %></li>
+			 	<% end %>
+		 	</ol>
+		<% else %>
+			<h6>Question is closed for voting</h6>
+			<h3>
+		  	<%= @question.description %>
+			</h3>
+		 	<ol type="a">
+				<% @question.answer_choices.each do |a| %>
+					<li><%= a.description %></li>
+		 		<% end %>
+		 	</ol>
+		 	<%= pie_chart AnswerChoice.group(:created_at).count %>
+		 	<%= bar_chart AnswerChoice.group(:created_at).count %>
+		<% end %>
+	<%= link_to "Delete Question", question_path(@question), method: :delete, :class => "button [tiny small large]" %><br>
+ <%= link_to "Back to my questions", questions_path, :class => "button [tiny small large]" %>
+	</div>
+
+</div>
