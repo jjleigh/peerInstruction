@@ -1,10 +1,25 @@
 class QuestionsController < ApplicationController
-before_filter :ensure_logged_in, except: [:index, :show]
+before_filter :ensure_logged_in, except: [:my_questions, :show]
 	
+	# handles /users/5/questions
+	# or /questions
+
 	def index
-		@user = current_user
-		@questions = @user.questions # This line of code only allows a current user to see their own questions
+		if params[:user_id]
+			@user = User.find(params[:user_id])
+			@questions = @user.questions
+		else
+			@questions = Question.where(:is_open => true)
+		end
+
 	end 
+
+	# # /questions/my_question
+	# def my_question
+	# 	@user = current_user 
+	# 	@my_questions = @user.questions # This line of code only allows a current user to see their own questions
+	# end 
+
 	def new
 		@question = Question.new
 	end
@@ -37,7 +52,9 @@ before_filter :ensure_logged_in, except: [:index, :show]
 
 	def show
 		@question =Question.find(params[:id])
-		
+		if @question.is_open
+			@question
+		end
 	end
 
 	def destroy
