@@ -27,7 +27,6 @@ before_filter :ensure_logged_in, except: [:index, :show]
 		@question = Question.new(question_params)
 		@question.user_id = current_user.id # This line of code stores the user for the question as the current user
 
-
 		if @question.save
 			redirect_to questions_path
 		else
@@ -49,6 +48,6 @@ before_filter :ensure_logged_in, except: [:index, :show]
 
 	private
 		def question_params
-			params.require(:question).permit(:question, :is_open, answer_choices_attributes: [:answer_choice, :_destroy])
+			params.require(:question).permit(:description, :is_open, user_attributes: [:id], answer_choices_attributes: [:answer_choice, :_destroy])
 		end
 end
