@@ -12,10 +12,12 @@
 			<li><%= a.description %></li>
  		<% end %>
  	</ol>
-	<%= form_for question do |f| %>
-		<%= f.label :is_open %>
-		<%= f.check_box :is_open %>
-		<%= f.submit %>
+ 	<% if question.user == current_user %>
+		<%= form_for question do |f| %>
+			<%= f.label :is_open %>
+			<%= f.check_box :is_open %>
+			<%= f.submit %>
+		<% end %>
 	<% end %>
 	<hr>
   
