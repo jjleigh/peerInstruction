@@ -4,9 +4,9 @@
 	 	<h3>
 	   <%= question.description %><br>
 	 	</h3>
-	
+
 	<% end %>
-	<p>created by:<%= question.user_id %></p>
+	
  	<ol type="a">
  		<% question.answer_choices.each do |a| %>
 			<li><%= a.description %></li>
