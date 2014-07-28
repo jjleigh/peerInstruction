@@ -3,20 +3,27 @@
 	<%= link_to question_path(question.id) do %>
 	 	<h3>
 	 	<hr>
-	   <%= question.description %><br>
+	   <%= question.description %>
 	 	</h3>
-	<% end %>
-	 <h5>
-	    It is <%= question.is_open %> that this question is open
-	 </h5>
+	 		<% end %>
+	 <p>
+	 		<% if question.is_open %>
+	 			Question is open for voting
+	 		<% else %>
+	 			Question is closed for voting
+	 		<% end %>
+	 </p>
 
-	
- 	<ol type="a">
+	<div id="answer-choice-list">
+
+	<ol type="a">
  		<% question.answer_choices.each do |a| %>
+ 			<div class="answer-choice-description">
 			<li><%= a.description %></li>
+			</div>
  		<% end %>
  	</ol>
-
+	</div>
 
 <% if question.user == current_user %>
  	<%= form_for question, remote: true do |f| %>

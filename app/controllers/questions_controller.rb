@@ -32,16 +32,20 @@ before_filter :require_login, except: [:show]
 
 #Could add a change state method and special route here; 
 
-	def update
-		@question = Question.find(params[:id])
-		@question.update_attributes(question_params)
+def update
+	@question = Question.find(params[:id])
 
-		# if @question.update_attributes(question_params)
-		# 	redirect_to questions_path
-		# else 
-		# 	render "edit"
-		# end 
+	respond_to do |format|
+		if @question.update_attributes(question_params)
+			format.html { redirect_to questions_path, notice: 'Question updated'} 
+			format.js {}
+		else
+			format.html { render 'edit', alert: 'Error updating'}
+			format.js {}
+		end
+
 	end
+end
 
 	def create
 		@question = Question.new(question_params)
@@ -70,7 +74,7 @@ before_filter :require_login, except: [:show]
 
 	private
 		def question_params
+			params.require(:question).permit(:description, :is_open, user_attributes: [:id], answer_choices_attributes: [:id, :description, :_destroy])
+		end
 
-			params.require(:question).permit(:description, :is_open, user_attributes: [:id], answer_choices_attributes: [:description, :_destroy])
-		end	
 end
