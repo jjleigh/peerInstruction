@@ -16,14 +16,12 @@
  	</ol>
 
  <% if current_user && current_user.instructor == true %>
- 	<%= form_for question do |f| %>
+ 	<%= form_for question, remote: true do |f| %>
 
  	<div class="switch">
- <%= f.check_box :is_open %> 
-	<%= f.label :is_open %>
+ <%= f.check_box :is_open, id: "question_#{question.id}_is_open" %> 
+	<%= f.label :is_open, for: "question_#{question.id}_is_open" %>
  	</div>
-
- 	<%= f.submit %>
  	 <% end %>
 
  <% end %>

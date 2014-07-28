@@ -1,9 +1,6 @@
 $(document).ready(function() { 
-	$(".question_checkboxes").change(function() {
-		$.ajax({
-			url: "/questions/1", 
-			dataType: "script",
-			type: 'PUT'
-		});
+	$(".switch input").change(function() {
+		var form = $(this).closest("form");
+		form.submit();
 	});
 });

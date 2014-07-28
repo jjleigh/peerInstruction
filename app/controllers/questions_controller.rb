@@ -17,12 +17,13 @@ before_filter :require_login, except: [:index, :show]
 
 	def update
 		@question = Question.find(params[:id])
+		@question.update_attributes(question_params)
 
-		if @question.update_attributes(question_params)
-			redirect_to questions_path
-		else 
-			render "edit"
-		end 
+		# if @question.update_attributes(question_params)
+		# 	redirect_to questions_path
+		# else 
+		# 	render "edit"
+		# end 
 	end
 
 	def create
