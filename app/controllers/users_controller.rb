@@ -1,4 +1,8 @@
 class UsersController < ApplicationController
+skip_before_filter :require_login, only: [:index, :new, :create]
+
+def index
+end
 
   def new
   	@user = User.new 
@@ -8,7 +12,7 @@ class UsersController < ApplicationController
   	@user = User.new(user_params)
 
   	if @user.save 
-  		redirect_to questions_url, :notice => "You have successfully signed up!"
+  		redirect_to login_url, :notice => "You have successfully signed up!"
   	else 
   		render 'new'
       flash.now[:alert] = "Sign up not successful"
@@ -41,6 +45,8 @@ class UsersController < ApplicationController
 
   private 
 	  def user_params
-	  	params.require(:user).permit(:instructor, :name, :email, :password, :password_confirmation)
+	  	params.require(:user).permit(:instructor, :name, :email, :password, :password_confirmation, :remember)
 	  end
+
+
 end

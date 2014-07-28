@@ -1,4 +1,5 @@
 <%= javascript_include_tag "path/to/highcharts.js", "chartkick" %>
+<<<<<<< HEAD
 
 <!-- this is the show page for an individual question. -->
 <!-- Instructor -->
@@ -33,3 +34,29 @@
 	</div>
 
 </div>
+=======
+<% if @question.is_open == true %>
+<h6>Question is open for voting</h6>
+ <h3>
+   <%= @question.question %>
+ </h3>
+ <ol type="a">
+ 	<% @question.answer_choices.each do |a| %>
+		<li><%= button_to a.answer_choice, question_answer_choice_responses_path(@question, a) %></li>
+ 	<% end %>
+ </ol>
+<% else %>
+	<h6>Question is closed for voting</h6>
+	<h3>
+  	<%= @question.question %>
+	</h3>
+ 	<ol type="a">
+		<% @question.answer_choices.each do |a| %>
+			<li><%= a.answer_choice %> voted by <%= a.users.size %> respondents</li>
+ 		<% end %>
+ 	</ol>
+ 	<%= pie_chart AnswerChoice.group(:created_at).count %>
+ 	 	<%= bar_chart AnswerChoice.group(:created_at).count %>
+<% end %>
+ <%= link_to "Back to my questions", questions_path %>
+>>>>>>> questionstyling

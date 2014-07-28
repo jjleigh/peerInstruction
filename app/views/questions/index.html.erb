@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- this page shows all the questions the user has created -->
 
   <div class="row">
@@ -52,3 +53,16 @@
   </div>
     
 	
+=======
+<% if current_user && current_user.instructor == true %>
+<h1><%= current_user.name %>'s questions</h1>
+<% else %>
+<h1>My questions </h1>
+<% end %>
+
+<div id="questions">
+<%= render @questions %>
+</div>
+
+<%= link_to "Create another new question", new_question_path %>
+>>>>>>> questionstyling

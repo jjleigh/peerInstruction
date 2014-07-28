@@ -1,5 +1,5 @@
 class QuestionsController < ApplicationController
-before_filter :ensure_logged_in, except: [:index, :show]
+before_filter :require_login, except: [:index, :show]
 	
 	def index
 		@user = current_user
@@ -13,11 +13,13 @@ before_filter :ensure_logged_in, except: [:index, :show]
 		@question = Question.find(params[:id])
 	end
 
+#Could add a change state method and special route here; 
+
 	def update
 		@question = Question.find(params[:id])
 
 		if @question.update_attributes(question_params)
-			redirect_to question_path(@question)
+			redirect_to questions_path
 		else 
 			render "edit"
 		end 

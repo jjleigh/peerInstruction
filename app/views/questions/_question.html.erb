@@ -2,22 +2,28 @@
 
 	<%= link_to question_path(question.id) do %>
 	 	<h3>
+	 	<hr>
 	   <%= question.description %><br>
 	 	</h3>
-	 <!-- <h5>
+	 <h5>
 	    It is <%= question.is_open %> that this question is open
-	 </h5> -->
+	 </h5>
 	<% end %>
-	<p>created by:<%= question.user_id %></p>
  	<ol type="a">
  		<% question.answer_choices.each do |a| %>
 			<li><%= a.description %></li>
  		<% end %>
  	</ol>
-	<%= form_for question do |f| %>
-		<%= f.label :is_open %>
-		<%= f.check_box :is_open %>
-		<%= f.submit %>
-	<% end %>
-	<hr>
-  
+
+ <% if current_user && current_user.instructor == true %>
+ 	<%= form_for question do |f| %>
+
+ 	<div class="switch">
+ <%= f.check_box :is_open %> 
+	<%= f.label :is_open %>
+ 	</div>
+
+ 	<%= f.submit %>
+ 	 <% end %>
+
+ <% end %>
