@@ -15,6 +15,7 @@ class AnswerChoicesController < ApplicationController
 	end
 
 	def edit
+		binding.pry
 		@answer_choice = Answer_choice.find(params[:id])
 	end
 

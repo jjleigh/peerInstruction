@@ -55,6 +55,6 @@ end
 
 	private
 		def question_params
-			params.require(:question).permit(:description, :is_open, user_attributes: [:id], answer_choices_attributes: [:description, :_destroy])
+			params.require(:question).permit(:description, :is_open, user_attributes: [:id], answer_choices_attributes: [:id, :description, :_destroy])
 		end
 end
