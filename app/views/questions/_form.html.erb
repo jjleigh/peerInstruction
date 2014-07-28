@@ -16,9 +16,9 @@
           <%= f.text_field :question %>
       </div>
   </div>
-
+<!-- There's a problem here, I need to make the question and answer choices editable without automatically copying the answer choices by default. -->
   <div class="field">
-      <div id="rewards">
+      <div id="answer_choices">
           <%= f.fields_for :answer_choices do |a| %>
               <%= render 'answer_choice_fields', :f => a %>
           <% end %>
