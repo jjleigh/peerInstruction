@@ -10,6 +10,7 @@
 			<h3>
 			  <%= @question.description %>
 			</h3>
+
 		 	<ol type="a">
 			 	<% @question.answer_choices.each do |a| %>
 					<li><%= button_to a.description, question_answer_choice_responses_path(@question, a) %><%= a.users.size %></li>
