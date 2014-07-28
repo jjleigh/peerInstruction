@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
 
-before_filter :ensure_logged_in, except: [:my_questions, :show]
+before_filter :require_login, except: [:show]
 
 	
 	# handles /users/5/questions
@@ -70,10 +70,7 @@ before_filter :ensure_logged_in, except: [:my_questions, :show]
 
 	private
 		def question_params
-<<<<<<< HEAD
+
 			params.require(:question).permit(:description, :is_open, user_attributes: [:id], answer_choices_attributes: [:description, :_destroy])
-=======
-			params.require(:question).permit(:description, :is_open, answer_choices_attributes: [:description, :_destroy])
->>>>>>> anonymousVoting
-		end
+		end	
 end
