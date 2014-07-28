@@ -44,6 +44,6 @@ class AnswerChoicesController < ApplicationController
 	private
 
 		def answer_choices_params
-			params.require(:answer_choice).permit(:answer_choice)
+			params.require(:answer_choice).permit(:description)
 		end
 end
