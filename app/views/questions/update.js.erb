@@ -1,1 +1,2 @@
 alert("update.js.erb is fired")
+$("#answer-choice-list").html("<%= escape_javascript(render(:partial => 'question')) %>");

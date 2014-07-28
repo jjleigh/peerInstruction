@@ -9,12 +9,16 @@
 	    It is <%= question.is_open %> that this question is open
 	 </h5>
 	<% end %>
+	<div id="answer-choice-list">
+
 	<ol type="a">
  		<% question.answer_choices.each do |a| %>
+ 			<div class="answer-choice-description">
 			<li><%= a.description %></li>
+			</div>
  		<% end %>
  	</ol>
-
+	</div>
 
  <% if current_user && current_user.instructor == true %>
  	<%= form_for question, remote: true do |f| %>

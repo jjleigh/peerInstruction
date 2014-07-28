@@ -1,7 +1,7 @@
 <!-- This is a partial that renders a q -->
 
-<%= link_to question_path(question.id) do %>
  <h3>
-   <%= question.answer_choice %>
+   <%= @question.answer_choices each do |a| %>
+   	<%= a.description %>
+   <% end %>
  </h3>
-<% end %>
