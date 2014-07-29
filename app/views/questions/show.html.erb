@@ -26,7 +26,8 @@
 					<li><%= a.description %></li>
 		 		<% end %>
 		 	</ol>
-		 	<%= pie_chart Response.group(:user).count %>
+		 	<%= pie_chart @question.responses.group("answer_choices.description").count %>
+		 	<%= column_chart @question.responses.group("answer_choices.description").count %>
 		<% end %>
 
 		<% if @question.user == current_user %>
