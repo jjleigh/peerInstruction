@@ -3,20 +3,15 @@
 <!-- this page shows all the questions the user has created -->
   <div class="row">
     <div class="small-12 columns">
-			<% if current_user %>
-      <h1><%= current_user.name %>'s questions</h1>
+			<% if params[:user_id] %>
+      <h1><%= @user.name %>'s questions</h1>
 			<% else %>
-			<h1>All questions</h1>
+			<h1>All open questions</h1>
 			<% end %>
-      <hr/>
     </div>
   </div>
 
 
-
- 
-   
- 
  
    <!-- this row holds the questions -->
  
@@ -25,38 +20,14 @@
     <div class="small-9 columns" role="content">
  	
 			<div id="questions">
-				<%= render @questions %>
+			<%= render @questions %>
 			</div>
 
-			<%= link_to "Create New Question", new_question_path %>
+			<p><%= link_to "Create New Question", new_question_path %></p>
+			<p><%= link_to "My questions", user_questions_path(current_user) %></p>
+			<p><%= link_to "All open questions", questions_path %></p>
 
     </div>
- 
-    
- 
-    <aside class="small-3 columns">
-    	
- 			<div class="panel">
-	      <h5>Welcome</h5>
-	      <ul class="side-nav">
-	        <li><a href="#">Name</a></li>
-	        <li><a href="#">email</a></li>
-	        <li><a href="#">Your groups</a></li>
-	      </ul>
-	 
-	      <div class="panel">
-	        <h5>My Dash</h5>
-	        <ul class="side-nav">
-		        <li><%= link_to 'Settings' %></li>
-		        <li><%= link_to "New question", new_question_path %></li>
-		        <li><%= link_to 'Invite' %></li>
-		        <li><%= link_to 'Participated polls' %></li>
-		        <li><%= link_to 'Delete account' %></li>
-		      </ul>
-		    </div>
-     	</div>
- 
-    </aside>
  
      
 

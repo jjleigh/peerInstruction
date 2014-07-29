@@ -15,7 +15,8 @@
         <div class="large-6 columns">
           <p>A free app for classroom polls. Use this to implement classroom polling as described by the Peer Instruction teaching methodology.</p>
           <% if current_user %>
-        <p><%= link_to "All my questions", questions_url %></p>
+        <p><%= link_to "All open questions", questions_url %></p>
+        <p><%= link_to "My questions", user_questions_path(current_user) %></p>
         <p><%= link_to "Create a new question", questions_url %></p>
           <% else %>
           <p><%= link_to "Login", login_url %>, or </p>

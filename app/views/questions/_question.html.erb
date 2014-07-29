@@ -6,13 +6,15 @@
 	   <%= question.description %>
 	 	</h3>
 	 		<% end %>
-	 <p>
+ 	 <p>
 	 		<% if question.is_open %>
 	 			Question is open for voting
 	 		<% else %>
 	 			Question is closed for voting
 	 		<% end %>
-	 </p>
+	 </p> 
+	 <p>Created by: <%= question.user.name %></p>
+
 
 	<div id="answer-choice-list">
 
