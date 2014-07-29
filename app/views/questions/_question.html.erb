@@ -1,7 +1,7 @@
 <!-- this page is the view all questions page -->
 
-	<div class="clickable-question"><%= link_to question_path(question.id) do %></div>
-	 	<h3>
+	<%= link_to question_path(question.id) do %>
+	 	<h3 id="clickable-question">
 	 	<hr>
 	   <%= question.description %>
 	 	</h3>
