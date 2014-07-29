@@ -3,8 +3,8 @@
 <!-- this page shows all the questions the user has created -->
   <div class="row">
     <div class="small-12 columns">
-			<% if params[:user_id] %>
-      <h1><%= @user.name %>'s questions</h1>
+			<% if current_user %>
+      <h1><%= current_user.name %>'s questions</h1>
 			<% else %>
 			<h1>All questions</h1>
 			<% end %>
