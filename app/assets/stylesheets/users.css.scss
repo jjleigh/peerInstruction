@@ -1,6 +1,7 @@
 
 
 #full-width {
+	margin-bottom: 20px;
 
  	h3 {
 	  -webkit-filter: blur(0);
@@ -10,8 +11,8 @@
 	  font-family: Bree Serif;
  		color: white;
  		font-size: 60px;
- 		padding-top: 150px;
- 		padding-left: 75px;
+ 		top: 150px;
+ 		left: 75px;
  	}
 
  	h5 {
@@ -19,9 +20,18 @@
  		color: white;
  		position: absolute;
  		z-index: 9;
- 		padding-top: 240px;
- 		padding-left: 75px;
+ 		top: 240px;
+ 		left: 75px;
  		font-family: Bree Serif;
+ 		}
+
+ 		.call-to-action {
+ 			position: absolute;
+ 			z-index: 9;
+ 			top: 175px;
+			left: 870px;
+
+
  		}
 
  	.bg-img {
@@ -30,6 +40,10 @@
 	 	width: 100% !important; 
 	 	background: url(http://uconndigitalarts.com/wp-content/uploads/2013/02/classroombuildinglectureresized.jpg);
 	  -webkit-filter: blur(2px);
+ 	}
+ 	.button-home {
+ 		margin-right: 20px;
+ 		border: 2px solid black;
  	}
 }
 
