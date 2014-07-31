@@ -2,6 +2,8 @@
 <html>
   <head>
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Peer Instruction" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Peer Instruction" %>">
@@ -21,28 +23,23 @@
         <%= yield %>
     </main>
 
-  </body>
-  <hr/>
-  <footer class="row">
-    <div class="large-12 columns">
-     
-      <div class="row">
-        <div class="large-6 columns">
+    <footer class="">
+
+
+        <div class="small-6 columns">
           <% if current_user %>
             <p>Logged in as: <%= current_user.name %><p>
-          <% else %>
-            <p>You are not logged in!</p>
           <% end %>
         </div>
         
-        <div class="large-6 columns">
+        <div class="small-6 columns">
           <ul class="inline-list right">
             <li><%= link_to "About", about_path %></li>
             <li><%= link_to "Contact", contact_path %></li>
           </ul>
         </div>
-      </div>
-    </div> 
-  </footer>
-  
+
+    </footer>
+  </body>
+
 </html>
