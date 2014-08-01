@@ -35,7 +35,11 @@ group :development do
   gem 'pry'
 end
 
-gem 'pg'
+group :production do
+	gem 'pg'
+end 
+
+
 
 gem 'sorcery'
 
