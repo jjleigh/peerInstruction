@@ -1,11 +1,6 @@
 <%# add navigation links to this file %>
 
 
-<ul class="left">
-	<li><i class="fi-lightbulb"></i></li>
-	<li class="app-logo">Peer Instruction</li>
-</ul>
-
 <ul class="right">
 	<% if current_user %>
 	  <li class="links-in-nav"><%= link_to "Logout", :logout, method: :post %></li>
@@ -16,6 +11,4 @@
 	  <li class="links-in-nav"><%= link_to "Register", new_user_path %></li>
 	  <li class="links-in-nav"><%= link_to "Login", :login %></li>
 	<% end %>
-
-	<li class="links-in-nav"><%= link_to "Home", root_path %></li>
 </ul>

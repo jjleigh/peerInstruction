@@ -15,9 +15,34 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
+
+
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li><%= link_to "Peer Instruction", root_path, :class => "app-logo" %></li>
+
+         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+      </ul>
+
+      <section class="top-bar-section">
+        <!-- Right Nav Section -->
+  
+        <ul class="right">
+          <% if current_user %>
+            <li class="links-in-nav"><%= link_to "Logout", :logout, method: :post %></li>
+            <li class="links-in-nav"><%= link_to "My questions", user_questions_path(current_user) %></li>
+            <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
+            <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
+          <% else %>
+            <li class="links-in-nav"><%= link_to "Register", new_user_path %></li>
+            <li class="links-in-nav"><%= link_to "Login", :login %></li>
+          <% end %>
+
+        </ul>
+      </section>
+    </nav>
+
 
     <main role="main" class="main">
         <%= render 'layouts/messages' %>

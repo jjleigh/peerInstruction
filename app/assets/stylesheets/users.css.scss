@@ -277,21 +277,37 @@
 /*This code handles the top navigation bar*/
 
 .app-logo {
-	font-family: Bree serif;
-	font-size: 17px;
-	color: white;
-	padding-top: 8px;
-	padding-left: 30px; 
+	font-family: 'Bree Serif', serif !important;
+	font-size: 17px !important;
+	color: white !important;
+	padding-left: 30px !important; 
+  padding-top: 10px !important;
+  display: inline-block !important;
 }
 
 .links-in-nav {
-	padding-right: 30px;
+	/*padding-right: 30px;*/
 }
 
 
+
+/*this code handles the drop down menu for the navigation bar*/
+
+
+
+
+/* this applies to the div with class footer in the application.html.erb*/
 @media screen and(max-width: 468px) {
 	.small-view {
 		display: block;
 		float:none;
 	}
+}
+
+.top-bar.expanded {
+  background-color: #333333;
+}
+
+.top-bar-section {
+/*	margin-top: 0px;*/
 }
