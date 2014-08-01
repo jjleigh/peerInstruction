@@ -1,6 +1,6 @@
 class SorceryCore < ActiveRecord::Migration
   def change
-    unless ActiveRecord::Base.connection.table_exists? 'users'
+    #unless ActiveRecord::Base.connection.table_exists? 'users'
     	drop_table :users
       create_table :users do |t|
         t.string :email,            :null => false
@@ -12,5 +12,5 @@ class SorceryCore < ActiveRecord::Migration
 
       add_index :users, :email, unique: true
     end
-  end
+  #end
 end
