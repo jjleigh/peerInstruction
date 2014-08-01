@@ -1,5 +1,6 @@
 <!-- this page is the view all questions page -->
 
+<div class="question-wrapper">
 	<%= link_to question_path(question.id) do %>
 	 	<h3 id="clickable-question">
 	 	<hr>
@@ -27,13 +28,15 @@
  	</ol>
 	</div>
 
-<% if question.user == current_user %>
- 	<%= form_for question, remote: true do |f| %>
-
- 	<div class="switch">
-	 	<%= f.check_box :is_open, id: "question_#{question.id}_is_open" %> 
-		<%= f.label :is_open, for: "question_#{question.id}_is_open" %>
- 	</div>
- 	<% end %>
+	<% if question.user == current_user %>
+ 		<%= form_for question, remote: true do |f| %>
+		 	<div class="switch">
+			 	<%= f.check_box :is_open, id: "question_#{question.id}_is_open" %> 
+				<%= f.label :is_open, for: "question_#{question.id}_is_open" %>
+		 	</div>
+ 		<% end %>
 <% end %>
 
+
+</div>
+	
