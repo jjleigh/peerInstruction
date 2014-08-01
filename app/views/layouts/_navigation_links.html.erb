@@ -8,14 +8,14 @@
 
 <ul class="right">
 	<% if current_user %>
-	  <li><%= link_to "Logout", :logout, method: :post %></li>
-		<li><%= link_to "My questions", user_questions_path(current_user) %></li>
-		<li><%= link_to "All open questions", questions_path %></li>
+	  <li class="links-in-nav"><%= link_to "Logout", :logout, method: :post %></li>
+		<li class="links-in-nav"><%= link_to "My questions", user_questions_path(current_user) %></li>
+		<li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
 
 	<% else %>
-	  <li><%= link_to "Register", new_user_path %></li>
-	  <li><%= link_to "Login", :login %></li>
+	  <li class="links-in-nav"><%= link_to "Register", new_user_path %></li>
+	  <li class="links-in-nav"><%= link_to "Login", :login %></li>
 	<% end %>
 
-	<li><%= link_to "Home", root_path %></li>
+	<li class="links-in-nav"><%= link_to "Home", root_path %></li>
 </ul>
