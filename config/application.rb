@@ -23,7 +23,7 @@ module PeerInstruction
     # For Foundation 5
     config.assets.precompile += %w( vendor/modernizr )
     # config.serve_static_assets = true
-    config.assets.compile = true
+    # config.assets.compile = true
     
   end
 end
