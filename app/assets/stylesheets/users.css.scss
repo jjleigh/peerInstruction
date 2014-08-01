@@ -90,7 +90,7 @@
 }
 /*This code handles the footer navigation */
 
-footer {
+.footer {
 	clear: both;
 	bottom: 0px;
 	left: 0px;
@@ -106,6 +106,174 @@ footer {
 	
 	}
 }
+
+ .bottom-bar-section ul {
+    width: auto;
+    height: auto !important;
+    display: inline-block;
+    margin: 0 auto;
+
+  }
+  /* line 472, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section ul li {
+    float: left;
+  }
+  /* line 474, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section ul li .js-generated {
+    display: none;
+  }
+  /* line 480, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section li.hover > a:not(.button) {
+   /* background-color: #555555;
+    background: #272727;*/
+    color: white;
+  }
+  /* line 489, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section li:not(.has-form) a:not(.button) {
+    padding: 0 15px;
+    line-height: 45px;
+   /* background: #333333;*/
+  }
+  /* line 493, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section li:not(.has-form) a:not(.button):hover {
+    background-color: #555555;
+/*    background: #272727;*/
+  }
+  /* line 502, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section li.active:not(.has-form) a:not(.button) {
+    padding: 0 15px;
+    line-height: 45px;
+    color: white;
+/*    background: #008cba;*/
+  }
+  /* line 507, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section li.active:not(.has-form) a:not(.button):hover {
+/*    background: #0078a0;*/
+  }
+  /* line 516, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .has-dropdown > a {
+    padding-right: 35px !important;
+  }
+  /* line 518, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .has-dropdown > a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 5px;
+    border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
+    border-top-style: solid;
+    margin-top: -2.5px;
+    top: 22.5px;
+  }
+  /* line 527, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .has-dropdown.moved {
+    position: relative;
+  }
+  /* line 528, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .has-dropdown.moved > .dropdown {
+    display: block;
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  /* line 534, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .has-dropdown.hover > .dropdown, .bottom-bar-section .has-dropdown.not-click:hover > .dropdown {
+    display: block;
+    position: static !important;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    clip: auto;
+    position: absolute !important;
+  }
+  /* line 541, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .has-dropdown .dropdown li.has-dropdown > a:after {
+    border: none;
+    content: "\00bb";
+    top: 1rem;
+    margin-top: -1px;
+    right: 5px;
+    line-height: 1.2;
+  }
+  /* line 554, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .dropdown {
+    left: 0;
+    top: auto;
+    background: transparent;
+    min-width: 100%;
+  }
+  /* line 561, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section  li a {
+    color: white;
+    line-height: 45px;
+    white-space: nowrap;
+    padding: 12px 15px;
+/*    background: #333333;*/
+  }
+  /* line 569, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .dropdown li:not(.has-form) a:not(.button) {
+    color: white;
+ /*   background: #333333;*/
+  }
+  /* line 573, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .dropdown li:not(.has-form):hover > a:not(.button) {
+    color: white;
+/*    background-color: #555555;*/
+/*    background: #272727;*/
+  }
+  /* line 581, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .dropdown li label {
+    white-space: nowrap;
+/*    background: #333333;*/
+  }
+  /* line 587, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .dropdown li .dropdown {
+    left: 100%;
+    top: 0;
+  }
+  /* line 595, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section > ul > .divider, .bottom-bar-section > ul > [role="separator"] {
+    border-bottom: none;
+    border-top: none;
+    border-right: solid 1px #4e4e4e;
+    clear: none;
+    height: 45px;
+    width: 0;
+  }
+  /* line 604, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .has-form {
+/*    background: #333333;*/
+    padding: 0 15px;
+    height: 45px;
+  }
+  /* line 612, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .right li .dropdown {
+    left: auto;
+    right: 0;
+  }
+  /* line 616, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .right li .dropdown li .dropdown {
+    right: 100%;
+  }
+  /* line 620, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .left li .dropdown {
+    right: auto;
+    left: 0;
+  }
+  /* line 624, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .bottom-bar-section .left li .dropdown li .dropdown {
+    left: 100%;
+  }
+
+  /* line 634, /Users/justinejones/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/foundation-rails-5.3.0.1/vendor/assets/stylesheets/foundation/components/_bottom-bar.scss */
+  .no-js .bottom-bar-section ul li:hover > a {
+    background-color: #555555;
+    background: #272727;
+    color: white;
+  }
 /*This code handles the top navigation bar*/
 
 .app-logo {
@@ -120,3 +288,10 @@ footer {
 	padding-right: 30px;
 }
 
+
+@media screen and(max-width: 468px) {
+	.small-view {
+		display: block;
+		float:none;
+	}
+}
