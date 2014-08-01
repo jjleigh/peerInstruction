@@ -31,7 +31,7 @@
         <div class="small-6 columns">
           <% if current_user %>
           <ul class="left">
-            <li>Logged in as: <%= current_user.name %><li>
+            <!-- <li>Logged in as: <%#= current_user.name %><li> -->
           </ul>
           <% end %>
         </div>
@@ -40,6 +40,7 @@
           <ul class="inline-list right">
             <li><%#= link_to "About", about_path %></li>
             <li><%#= link_to "Contact", contact_path %></li>
+            <li><%#= link_to "FAQ", FAQ_path%></li>
           </ul>
         </div>
 
