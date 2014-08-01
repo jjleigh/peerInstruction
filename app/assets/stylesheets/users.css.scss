@@ -21,7 +21,7 @@
  		color: white;
  		position: absolute;
  		z-index: 9;
- 		top: 240px;
+ 		top: 270px;
  		left: 75px;
  		font-family: Bree Serif;
  		}
@@ -30,7 +30,7 @@
  			position: absolute;
  			z-index: 9;
  			top: 175px;
-			left: 870px;
+			left: 950px;
  		}
 
  	.bg-img {
@@ -51,13 +51,15 @@
 		list-style: none;
 
 		li {
+			margin-top: 100px;
 			width: 180px;
 			height: 200px;
 			float: left;
 			margin-right: 9px;
 
 			span {
-				font-size: 100px;
+				margin-top: 30px;
+				font-size: 80px;
 				opacity: 0.5;
 				position: absolute;
 				top: 0;				
@@ -93,6 +95,9 @@ footer {
 	left: 0px;
 	height: 50px;
 	width: 100%;
+	/*border-top: 2px solid gray;*/
+	color: white;
+	background-color: #2E2E2D;
 }
 /*This code handles the top navigation bar*/
 
