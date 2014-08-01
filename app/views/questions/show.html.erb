@@ -2,38 +2,44 @@
 
 <!-- this is the show page for an individual question. -->
 <!-- Instructor -->
+<div class="show-question">
+	<div class="row">
+		<div class="small-6 columns">
+			<% if @question.is_open == true %>
+				<h6>Question is open for voting</h6>
+				<h3>
+				  <%= @question.description %>
+				</h3>
 
-<div class="row">
-	<div class="small-6 columns">
-		<% if @question.is_open == true %>
-			<h6>Question is open for voting</h6>
-			<h3>
-			  <%= @question.description %>
-			</h3>
+			 	<ol type="a">
+				 	<% @question.answer_choices.each do |a| %>
+						<li><%= button_to a.description, question_answer_choice_responses_path(@question, a) %><%#= a.users.size %></li>
+				 	<% end %>
+			 	</ol>
+			<% else %>
+				<h6>Question is closed for voting</h6>
+				<h3>
+			  	<%= @question.description %>
+				</h3>
+			 	<ol type="a">
+					<% @question.answer_choices.each do |a| %>
+						<li><%= a.description %></li>
+			 		<% end %>
+			 	</ol>
+			<% end %>
 
-		 	<ol type="a">
-			 	<% @question.answer_choices.each do |a| %>
-					<li><%= button_to a.description, question_answer_choice_responses_path(@question, a) %><%#= a.users.size %></li>
-			 	<% end %>
-		 	</ol>
-		<% else %>
-			<h6>Question is closed for voting</h6>
-			<h3>
-		  	<%= @question.description %>
-			</h3>
-		 	<ol type="a">
-				<% @question.answer_choices.each do |a| %>
-					<li><%= a.description %></li>
-		 		<% end %>
-		 	</ol>
-		 	<%= pie_chart @question.responses.group("answer_choices.description").count %>
-		 	<%= column_chart @question.responses.group("answer_choices.description").count %>
-		<% end %>
+			<% if @question.user == current_user %>
+				<%= link_to "Delete Question", question_path(@question), method: :delete, :class => "button [tiny small large]" %><br>
+			<% end %>
+	 		<%= link_to "Back", questions_path, :class => "button [tiny small large]" %>
+		</div>
 
-		<% if @question.user == current_user %>
-			<%= link_to "Delete Question", question_path(@question), method: :delete, :class => "button [tiny small large]" %><br>
-		<% end %>
- 		<%= link_to "Back", questions_path, :class => "button [tiny small large]" %>
+
+		<div class="small-6 columns">
+			<%#= pie_chart @question.responses.group("answer_choices.description").count %>
+			<%= column_chart @question.responses.group("answer_choices.description").count %>
+		</div>
+			
 	</div>
 
 </div>
