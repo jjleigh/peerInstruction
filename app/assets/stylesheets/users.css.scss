@@ -88,6 +88,7 @@
 	padding: 0;
 	min-height: 600px;
 }
+/*This code handles the footer navigation */
 
 footer {
 	clear: both;
@@ -98,6 +99,12 @@ footer {
 	/*border-top: 2px solid gray;*/
 	color: white;
 	background-color: #2E2E2D;
+	list-style: none;
+
+	.footer-links {
+		color: white;
+	
+	}
 }
 /*This code handles the top navigation bar*/
 

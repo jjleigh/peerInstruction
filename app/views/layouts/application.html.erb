@@ -30,14 +30,16 @@
         
         <div class="small-6 columns">
           <% if current_user %>
-            <p>Logged in as: <%= current_user.name %><p>
+          <ul class="left">
+            <li>Logged in as: <%= current_user.name %><li>
+          </ul>
           <% end %>
         </div>
               
         <div class="small-6 columns">
           <ul class="inline-list right">
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
+            <li><%#= link_to "About", about_path %></li>
+            <li><%#= link_to "Contact", contact_path %></li>
           </ul>
         </div>
 
