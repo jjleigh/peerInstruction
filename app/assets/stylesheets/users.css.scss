@@ -280,15 +280,17 @@
 	font-family: 'Bree Serif', serif !important;
 	font-size: 17px !important;
 	color: white !important;
-	padding-left: 50px !important; 
+	margin-left: 50px !important;
   display: inline-block !important;
 }
 
-.links-in-nav {
-	/*padding-right: 30px;*/
+.right {
+  margin-right: 30px !important;
+  .links-in-nav {
+  /*padding-right: 30px;*/
+  
+  }
 }
-
-
 
 /*this code handles the drop down menu for the navigation bar*/
 

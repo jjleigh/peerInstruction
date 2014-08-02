@@ -3,7 +3,6 @@
 <div class="question-wrapper">
 	<%= link_to question_path(question.id) do %>
 	 	<h3 id="clickable-question">
-	 	<hr>
 	   <%= question.description %>
 	 	</h3>
 	 		<% end %>
@@ -35,8 +34,8 @@
 				<%= f.label :is_open, for: "question_#{question.id}_is_open" %>
 		 	</div>
  		<% end %>
-<% end %>
+	<% end %>
 
-
+	<hr>
 </div>
 	

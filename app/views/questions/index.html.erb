@@ -37,15 +37,23 @@
 
      <aside class="small-3 columns">
  
-      <ul class="side-nav">
-      	<li><%= link_to "All open questions", questions_path, :class => 'button [tiny small large]' %></li>
-        <li><%= link_to "Create a question", new_question_path, :class => 'button [tiny small large]' %></li>
-        <li><%= link_to "My questions", user_questions_path(current_user), :class => 'button [tiny small large]' %></li>
-      </ul>
- 
+      
       <div class="panel">
-        <h5>Featured</h5>
-        <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
+
+ 
+
+        <h5>Welcome</h5>
+        <hr>
+
+        <p><%= current_user.name %></p>
+        <p></p>
+
+
+        <ul class="side-nav">
+          <li><%= link_to "All open questions", questions_path, :class => 'button [tiny small large]' %></li>
+          <li><%= link_to "Create a question", new_question_path, :class => 'button [tiny small large]' %></li>
+          <li><%= link_to "My questions", user_questions_path(current_user), :class => 'button [tiny small large]' %></li>
+        </ul>
         
       </div>
  

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head> 
+  <head>
+    <link href='http://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'> 
     <link href='http://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
@@ -34,7 +35,7 @@
               <li class="links-in-nav"><%= link_to "Logout", :logout, method: :post %></li>
               <li class="links-in-nav"><%= link_to "My questions", user_questions_path(current_user) %></li>
               <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
-              <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
+  
             <% else %>
               <li class="links-in-nav"><%= link_to "Register", new_user_path %></li>
               <li class="links-in-nav"><%= link_to "Login", :login %></li>
