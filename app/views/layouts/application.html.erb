@@ -15,32 +15,36 @@
   </head>
   <body>
 
+    <div class="sticky">
+      <nav class="top-bar" data-topbar>
+        <section class="top-bar-section">
 
-    <nav class="top-bar" data-topbar>
-      <ul class="title-area">
-        <li><%= link_to "Peer Instruction", root_path, :class => "app-logo" %></li>
+      <!-- Left nav Section -->
+          <ul class="left">
+            <li><%= link_to "Peer Instruction", root_path, :class => "app-logo" %></li>
 
-         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-        <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-      </ul>
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
 
-      <section class="top-bar-section">
+            <li class="toggle-topbar icon"><a href="#"><span>Menu</span></a></li>  
+          </ul>
+
         <!-- Right Nav Section -->
-  
-        <ul class="right">
-          <% if current_user %>
-            <li class="links-in-nav"><%= link_to "Logout", :logout, method: :post %></li>
-            <li class="links-in-nav"><%= link_to "My questions", user_questions_path(current_user) %></li>
-            <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
-            <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
-          <% else %>
-            <li class="links-in-nav"><%= link_to "Register", new_user_path %></li>
-            <li class="links-in-nav"><%= link_to "Login", :login %></li>
-          <% end %>
+          <ul class="right">
+            <% if current_user %>
+              <li class="links-in-nav"><%= link_to "Logout", :logout, method: :post %></li>
+              <li class="links-in-nav"><%= link_to "My questions", user_questions_path(current_user) %></li>
+              <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
+              <li class="links-in-nav"><%= link_to "All open questions", questions_path %></li>
+            <% else %>
+              <li class="links-in-nav"><%= link_to "Register", new_user_path %></li>
+              <li class="links-in-nav"><%= link_to "Login", :login %></li>
+            <% end %>
 
-        </ul>
-      </section>
-    </nav>
+          </ul>
+        </section>
+      </nav>
+    </div>
+    
 
 
     <main role="main" class="main">
