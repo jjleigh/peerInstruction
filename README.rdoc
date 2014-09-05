@@ -1,11 +1,27 @@
 == PEER INSTRUCTION
 
+
 DESCRIPTION:
-  This is an rails based polling app. It's primary function is to create realtime polls to make classroom instruction
+  This is a rails based polling app. It's primary function is to create realtime polls to make classroom instruction
   and presentations interactive. It is based on the peer instruction methodology as presented 
   by: Erik Mazur http://mazur.harvard.edu/research/detailspage.php?rowid=8
   
   This app will be under the GNU GPL.
+  
+Collaborators: 
+
+  Justine Jones
+  Justine Podur 
+  
+Specs: 
+
+  Back end - Ruby on rails
+  UX - foundation framework
+  Chart - Chark kick
+  
+Heroku hosting:
+
+http://peer-instruction.herokuapp.com/
   
   
   
