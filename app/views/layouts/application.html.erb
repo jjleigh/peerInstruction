@@ -19,16 +19,19 @@
 
     <div class="sticky">
       <nav class="top-bar" data-topbar>
-        <ul class="title-area">
-               
-          <li class="name">
-            <div class="logo-container">
-              <h1><%= link_to "Peer Instruction", root_path, :class => "app-logo" %></h1>
-            </div>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
-        </ul>
         <section class="top-bar-section">
+
+      <!-- Left nav Section -->
+          <ul class="left">
+
+
+            <li><%= link_to "Peer Instruction", root_path, :class => "app-logo" %></li>
+
+           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+
+            <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>  
+          </ul>
+
         <!-- Right Nav Section -->
           <ul class="right">
             <% if current_user %>
