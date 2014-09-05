@@ -41,9 +41,14 @@
 	  -webkit-filter: blur(2px);
  	}
  	.button-home {
+    background-color: #789F63;
  		margin-right: 20px;
- 		border: 1px solid black;
+    border-radius: 3px;
  	}
+
+  .button-home:hover {
+    background-color: #789F63;
+  }
 
 
 
