@@ -1,22 +1,24 @@
-footer {
-	background-color: #333333 !important;
-	margin-top: 65px;
-}
 
 
 .footer-container {
 	margin-top: 65px;
+}
+
+.learn-more {
+	background-color: #333333;
 
 	h5 {
-		font-family: open sans !important;
-		color: silver !important;
+		font-family: open sans;
+		color: silver;
 	}
 
-	p {
-		font-family: open sans !important;
-		color: silver !important;
+	p{ 
+		/*padding-bottom: 50px;*/
+		font-family: open sans;
+		color: silver
 	}
 }
+
 
 
 .social-container {
