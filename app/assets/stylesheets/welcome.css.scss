@@ -1,14 +1,21 @@
+
+body {
+	background-color: white;
+}
 .links-in-nav {
 	a {
 		font-family: open sans;
 	}
 }
 
-.form-buttons {
-	background-color: gray !important;
-	border-radius: 3px;
-}
+div.actions {
 
-.form-buttons:hover {
-	background-color: gray !important;
+	.form-buttons {
+		background-color: gray !important;
+		border-radius: 3px;
+	}
+
+	.form-buttons:hover {
+		background-color: gray !important;
+	}
 }
