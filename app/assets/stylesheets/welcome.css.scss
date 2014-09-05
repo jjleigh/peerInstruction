@@ -8,14 +8,11 @@ body {
 	}
 }
 
-div.actions {
-
-	.form-buttons {
+div.actions > .form-buttons {
 		background-color: gray !important;
 		border-radius: 3px;
-	}
 
-	.form-buttons:hover {
+}
+div.actions	.form-buttons:hover {
 		background-color: gray !important;
 	}
-}
