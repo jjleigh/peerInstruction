@@ -1,26 +1,21 @@
-.footer-container {
+footer {
+	background-color: #333333;
 	margin-top: 65px;
 }
 
 
-.learn-more {
-	background-color: #2E4857;
+.footer-container {
+	margin-top: 65px;
 
 	h5 {
-		font-family: lato;
+		font-family: open sans;
 		color: silver;
 	}
 
-	p{ 
-		/*padding-bottom: 50px;*/
-		font-family: lato;
-		font-weight: 300;
-		color: silver
+	p {
+		font-family: open sans;
+		color: silver;
 	}
-}
-
-hr {
-	margin-bottom: 0;
 }
 
 
