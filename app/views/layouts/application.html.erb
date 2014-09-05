@@ -18,17 +18,16 @@
 
     <div class="sticky">
       <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+               
+          <li class="name">
+            <div class="logo-container">
+              <h1><%= link_to "Peer Instruction", root_path, :class => "app-logo" %></h1>
+            </div>
+          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
+        </ul>
         <section class="top-bar-section">
-
-      <!-- Left nav Section -->
-          <ul class="left">
-            <li><%= link_to "Peer Instruction", root_path, :class => "app-logo" %></li>
-
-           <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-
-            <li class="toggle-topbar icon"><a href="#"><span>Menu</span></a></li>  
-          </ul>
-
         <!-- Right Nav Section -->
           <ul class="right">
             <% if current_user %>
@@ -53,29 +52,41 @@
         <%= yield %>
     </main>
 
-    <div class="footer">
+   <footer class="row ">
+    <div class="large-12 columns footer-container">
 
-      <div class="row">
-        
-       <!--  <div class="small-6 columns">
-          <% #if current_user %>
-          <ul class="left">
-            <! <li>Logged in as: <%#= current_user.name %><li> -->
- <!--          </ul> -->
-          <%#end %>
-<!--         </div> -->
-              
-        <div class="bottom-bar-section small-12 columns">
-          <ul class="inline-list small-view medium-offset-4">
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "Contact", contact_path %></li>
-            <li><%= link_to "FAQ"%></li>
+      <div clas="row ">
+        <div class="large-5 columns about-container">
+          <h5>About</h5>
+          <p>Who are we</p>
+          <p>What is crowfunder</p>
+          <p>Jobs</p>
+          <p>Press</p>
+        </div>
+        <div class="large-5 columns">
+          <h5>Help</h5>
+          <p>FAQ</p>
+          <p>Terms of service</p>
+          <p>Privacy policy</p>
+          <p>Trust and saftey</p>
+        </div>
+      </div>
+
+      <hr>
+      <div class="row ">
+        <div class="large-6 columns social-container">
+          <p class=""> Peer Instruction</p>
+        </div>
+        <div class="large-6 columns">
+          <ul class="inline-list right social-container">
+            <li><a href="#"><i class="fa fa-twitter social-icons" style=" color: silver"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook social-icons" style=" color: silver"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus social-icons" style=" color: silver"></i></a></li>
           </ul>
         </div>
-
       </div>
-       
-    </div>
+    </div> 
+  </footer>
   </body>
 
 </html>
