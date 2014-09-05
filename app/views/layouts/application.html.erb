@@ -53,32 +53,21 @@
         <%= yield %>
     </main>
 
-    <div class="learn-more">
-  
+    <div class="footer">
 
-  <footer class="row ">
-    <div class="large-12 columns footer-container">
+      <div class="row">
+              
+        <div class="bottom-bar-section small-12 columns">
+          <ul class="inline-list small-view medium-offset-4">
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+            <li><%= link_to "FAQ"%></li>
+          </ul>
+        </div>
 
-      <div clas="row ">
-        <div class="large-5 columns about-container">
-          <h5>About</h5>
-        </div>
-        <div class="large-5 columns">
-          <h5>Help</h5>
-          <p>FAQ</p>
-        </div>
       </div>
-
-      <hr>
-      <div class="row ">
-        <div class="large-12 columns">
-          <p class="">© Crowdfunder</p>
-        </div>
-      
-    </div> 
-  </footer>
-</div> 
- 
+       
+    </div>
   </body>
 
 </html>
