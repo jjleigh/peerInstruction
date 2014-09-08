@@ -40,3 +40,33 @@ div.actions > .form-buttons {
 	color: #333333;
 	font-family: open sans;
 }
+
+
+/*This code handles the top navigation bar*/
+
+  .app-logo {
+	font-family: 'Bree Serif', serif !important;
+	font-size: 19px !important;
+	color: white !important;
+	/*margin-left: 30px !important;*/
+  display: inline-block !important;
+  /*text-align: center !important;*/
+  background-color: #789F63;
+	padding-bottom: 15px;
+	padding-top: 12px;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.right {
+  margin-right: 30px !important;
+}
+
+ul.left {
+	margin-left: 80px;
+}
+
+ul.left > li {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
