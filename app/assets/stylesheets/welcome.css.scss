@@ -51,11 +51,11 @@ div.actions > .form-buttons {
 	/*margin-left: 30px !important;*/
   display: inline-block !important;
   /*text-align: center !important;*/
-  background-color: #789F63;
-	padding-bottom: 15px;
-	padding-top: 12px;
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+  background-color: #789F63 !important;
+	padding-bottom: 15px !important;
+	padding-top: 12px !important;
+	border-bottom-left-radius: 3px !important;
+	border-bottom-right-radius: 3px !important;
 }
 
 .right {
@@ -63,10 +63,10 @@ div.actions > .form-buttons {
 }
 
 ul.left {
-	margin-left: 80px;
+	margin-left: 80px !important;
 }
 
 ul.left > li {
-	border-bottom-left-radius: 3px;
-	border-bottom-right-radius: 3px;
+	border-bottom-left-radius: 3px !important;
+	border-bottom-right-radius: 3px !important;
 }
