@@ -16,21 +16,21 @@ div.actions > .form-buttons {
 }
 
 
-div.nested-fields  > .form-buttons{
+div.nested-fields  > a.form-buttons{
 	background-color: gray !important;
 	border-radius: 3px;
 }
 
-div#answer_choices  > .form-buttons {
+div#answer_choices  > a.form-buttons {
 	background-color: gray !important;
 	border-radius: 3px;
 }
- div.show-question > .form-buttons{
+ div.show-question > a.form-buttons{
 	background-color: gray !important;
 	border-radius: 3px;
  }
 
- div.side-nav > .form-buttons{
+ div.side-nav > a.form-buttons{
 	background-color: gray !important;
 	border-radius: 3px;
  }
