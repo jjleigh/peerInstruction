@@ -16,6 +16,8 @@ div.actions > .form-buttons {
 }
 
 
+
+
 div.nested-fields  > a.form-buttons{
 	background-color: gray !important;
 	border-radius: 3px;
@@ -86,6 +88,8 @@ div#answer_choices  > a.form-buttons {
 
 ul.left {
 	margin-left: 80px !important;
+	position: absolute;
+	z-index: 999;
 }
 
 ul.left > li {
