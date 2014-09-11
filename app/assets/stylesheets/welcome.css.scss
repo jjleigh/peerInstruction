@@ -88,8 +88,8 @@ div#answer_choices  > a.form-buttons {
 
 ul.left {
 	margin-left: 80px !important;
-	position: absolute;
-	z-index: 999;
+	position: absolute !important;
+	z-index: 999 !important;
 }
 
 ul.left > li {
