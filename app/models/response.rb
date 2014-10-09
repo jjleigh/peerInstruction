@@ -1,12 +1,12 @@
 class Response < ActiveRecord::Base
 	belongs_to :question
 	belongs_to :user
-	belongs_to :answer_choices
+	belongs_to :answer_choice
 
 
 
 	validates :user_id, :uniqueness => {:scope => :question_id, :message => "You have already placed a vote"}
-
+	validates :user_id, :question_id, :answer_choice, :presence => true
 
 #this does the same thing as the method below. Just saving it as an example of a secon way to do it.
 
