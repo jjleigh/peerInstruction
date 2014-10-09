@@ -5,5 +5,5 @@ class Question < ActiveRecord::Base
 
 	accepts_nested_attributes_for :answer_choices, :reject_if => :all_blank, :allow_destroy => true
 
-	validates :description, :presence => true 
+	validates :description, :user_id, :presence => true 
 end

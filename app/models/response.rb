@@ -8,7 +8,7 @@ class Response < ActiveRecord::Base
 	validates :user_id, :uniqueness => {:scope => :question_id, :message => "You have already placed a vote"}
 	validates :user_id, :question_id, :answer_choice, :presence => true
 
-#this does the same thing as the method below. Just saving it as an example of a secon way to do it.
+#this does the same thing as the method below. Just saving it as an example of a second way to do it.
 
 	# validate :user_can_only_vote_once
 

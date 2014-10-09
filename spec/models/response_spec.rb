@@ -7,8 +7,6 @@ describe Response do
 			expect(build(:response, question_id: nil)).to_not be_valid
 		end
 
-		# email tests
-
 		it 'is invalid without an user_id' do
 			expect(build(:response, user_id: nil)).to_not be_valid
 		end
