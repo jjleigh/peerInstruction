@@ -4,5 +4,5 @@ class AnswerChoice < ActiveRecord::Base
 	has_many :responses, dependent: :destroy
 	has_many :users, through: :responses, dependent: :destroy
 
-	validates :question_id, :description, :presence => true
+	validates :description, :presence => true
 end
